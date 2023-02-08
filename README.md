@@ -1,14 +1,11 @@
 # algorithm
 
-## 내기
-- 2023 Google Code Jam 점수 오마카세
-  - 참가자: @makmonster-U
+## Programming Cup
+- 2023 Google Code Jam
+  - 👥: @seunguri, @makmonster-U
+  - 🏆: 상남스시 점수 내기
 
-## 목표는 수상
-- Google Code Jam
-- SCPC
-
-## 주노큘럼
+## Curriculum
 
 1. ~~[커리요약](https://www.youtube.com/watch?v=ukkLCl9yBvE)~~ : 230205
 2. ~~[코드업 기초 100제](https://www.codeup.kr/problemsetsol.php?psid=33)~~ : 230207
@@ -23,3 +20,5 @@
 **문제풀이 전략**
 - 초반엔 10~20분 생각해서 모르겠으면 너무 고민 말고 바로 답지 보기
 - 다른 고인물들이 푼 풀이 보며 구현 꿀팁 얻기
+
+###### 🙇주노큘럼 감사해요. @Tarakyu
