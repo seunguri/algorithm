@@ -1,8 +1,17 @@
 # algorithm
+
+## 내기
+- 2023 Google Code Jam 점수 오마카세
+  - 참가자: @makmonster-U
+
+## 목표는 수상
+- Google Code Jam
+- SCPC
+
 ## 주노큘럼
 
-1. [커리요약](https://www.youtube.com/watch?v=ukkLCl9yBvE)
-2. [코드업 기초 100제](https://www.codeup.kr/problemsetsol.php?psid=33)
+1. ~~[커리요약](https://www.youtube.com/watch?v=ukkLCl9yBvE)~~ : 230205
+2. ~~[코드업 기초 100제](https://www.codeup.kr/problemsetsol.php?psid=33)~~ : 230207
 3. [이론 6장  DP까지](https://www.youtube.com/playlist?list=PLRx0vPvlEmdAghTr5mXQxGpHjWqSz0dgC)
 4. [클래스 3+까지 딸 수 있을 정도로 기본기 연습](https://solved.ac/class)
    1. 그리디 알고리즘 50문제
