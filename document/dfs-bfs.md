@@ -8,7 +8,7 @@
 - 선입선출
 - from collections import deque
   - list를 이용하면 시간복잡도가 올라감
-  - stack과 quere의 장점을 모두 합함. : append(), popleft()
+  - stack과 queue의 장점을 모두 합함. : append(), popleft()
   - 오른쪽으로 들어와서 왼쪽으로 나가는 것으로 이미징
 - queue.reverse(): 나중에 들어온 원소부터 출력
 

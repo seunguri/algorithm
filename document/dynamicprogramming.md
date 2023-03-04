@@ -17,4 +17,4 @@ LIS(Longest Increasing Subsequence)
 2. 다른 알고리즘으로 풀이 방법이 떠오르지 않으면 DP 고려
    - 작은 문제로 큰 문제 해결(optimal substructure) + 부분 문제 중복(overlapping subproblem)
 3. 재귀 함수로 비효율적인 완전 탐색 프로그램을 작성
-4. 작은 문제에서 구한 답이 큰 문제에 그대로 사용될 수 있으면, 코드 개선 가능
+4. 작은 문제에서 구한 답이 큰 문제에 그대로 사용될 수 있으면, 메모이제이션으로 코드 개선 가능
