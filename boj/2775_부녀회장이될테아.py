@@ -1,7 +1,7 @@
 '''
 1. summurize [a-1][0]~[a-1][b-1], [0][i] => i
-2. DP Memoization
-3. Propose a solution
+2. Bottom up
+3. DP Memoization
 4. Propose a alternative solution
 5. Implement the solution
 '''
