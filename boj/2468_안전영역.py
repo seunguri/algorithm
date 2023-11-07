@@ -7,10 +7,10 @@
 '''
 
 
-def dfs(x, y):
+def dfs(x, y, rain):
     visited[x][y] = True
     for i in graph[x][y]:
-        if not visited[x][y]:
+        if not visited[x][y] and :
             dfs(i)
 
 
@@ -19,6 +19,7 @@ area = []
 for _ in range(N):
     area.append(map(int, input().split()))
 
-rain = 1
 visited = [[0] * N for _ in range(N)]
-dfs(0, 0)
+rain = 1
+while(True):
+    dfs(0, 0, rain)
