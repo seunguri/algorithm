@@ -1,6 +1,17 @@
 '''
-1. Clarify the problem
-2. Define your approach
+1. - merge란 같은 값을 공유
+    근거: 선택한 두 셀은 서로 인접하지 않을 수도 있다. 그 사이의 위치한 셀들은 영향X
+   - 값이 없어도 병합 가능
+    근거: unmerge시 해당 셀의 모든 병합을 해제
+
+2. 어떤 자료구조를 사용할까? [value, [(r, c), (r2, c2), ...]]
+    근거: 
+        - merge 정의에 따라 병합은 데이터의 공유이므로 value를 셀마다 일일이 저장할 필요없다.
+         각각의 value에 셀 정보를 저장한다
+        - unmerge command를 위해서 병합된 셀 끼리의 정보가 필요하다
+        - 같은 value지만 병합은 아닐 수 있다
+    이점: 
+        - update value1 value2 에서 value 값만 바꾸면 모든 셀이 업데이트 됨
 3. Propose a solution
 4. Propose a alternative solution
 5. Implement the solution
