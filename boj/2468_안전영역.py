@@ -10,7 +10,7 @@
 def dfs(x, y, rain):
     visited[x][y] = True
     for i in graph[x][y]:
-        if not visited[x][y] and :
+        if not visited[x][y]:
             dfs(i)
 
 
