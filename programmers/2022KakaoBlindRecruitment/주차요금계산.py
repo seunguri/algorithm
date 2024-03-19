@@ -1,28 +1,40 @@
-from math import ceil
-def solution(fees, records):
-    answer = []
-    default_time, default_fee, unit_time, unit_fee = fees
-    parking = {}
-    using_time = {}
-    for record in records:
-        time, number, io = record.split()
-        hour, minute = map(int,time.split(":"))
-        time = hour * 60 + minute
-        if io == "IN":
-            parking[number] = time
-        elif io == "OUT":
-            if number in using_time:
-                using_time[number] += (time - parking[number])
-            else:
-                using_time[number] = time - parking[number]
-            del parking[number]
-    for number, time in parking.items():
-        if number in using_time:
-            using_time[number] += 1439 - time
-        else:
-            using_time[number] = 1439 - time
-    for number, time in sorted(using_time.items(), key = lambda x:x[0]):
-        answer.append(default_fee+ max(0,ceil((time-default_time)/unit_time)) * unit_fee)
-    return answer
+import math
 
-print(solution([180, 500], ["05:34 5961 IN", "06:00 0000 IN", "06:34 0000 OUT", "07:59 5961 OUT", "07:59 0148 IN", "18:59 0000 IN", "19:09 0148 OUT", "22:59 5961 IN", "23:00 5961 OUT"]))
+def solution(fees, records):
+    basic_minute = fees[0]
+    basic_fee = fees[1]
+    minute_rate = fees[2]
+    unit_fee = fees[3]
+
+    parked_cars = list(set(map(lambda x: x.split()[1], records)))
+    total_fees = {k: 0 for k in parked_cars}
+    check_in_times = {}
+
+    for record in records:
+        record_info = record.split(' ')
+        car_id = record_info[1]
+
+        if car_id not in check_in_times.keys():
+            check_in_times[car_id] = record_info[0]
+        else:
+            if record_info[-1] == 'OUT':
+                out_time = int(record_info[0].split(':')[0]) * 60 + int(record_info[0].split(':')[1])
+                in_time = int(check_in_times[car_id].split(':')[0]) * 60 + int(check_in_times[car_id].split(':')[1])
+                total_fees[car_id] += out_time - in_time
+                del check_in_times[car_id]
+
+    if check_in_times:
+        for car_id in check_in_times.keys():
+            out_time = 1439
+            in_time = int(check_in_times[car_id].split(':')[0]) * 60 + int(check_in_times[car_id].split(':')[1])
+            total_fees[car_id] += out_time - in_time
+
+    result = []
+    for car_id, time_parked in total_fees.items():
+        if time_parked <= basic_minute:
+            result.append((car_id, basic_fee))
+        else:
+            additional_units = math.ceil((time_parked - basic_minute) / minute_rate)
+            result.append((car_id, basic_fee + (additional_units * unit_fee)))
+
+    return list(map(lambda x: x[1], sorted(result)))
