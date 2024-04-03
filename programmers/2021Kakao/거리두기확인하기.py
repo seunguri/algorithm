@@ -73,7 +73,7 @@ def bfs(p):
                         visited[ny][nx] = 1
                         distance[ny][nx] = distance[y][x] + 1
                     
-                    if distance[y][x] <= and p[ny][nx] == "P": return 0
+                    if distance[y][x] <= 1 and p[ny][nx] == "P": return 0
         
     return 1
 
